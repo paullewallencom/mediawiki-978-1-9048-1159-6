@@ -1,0 +1,59 @@
+
+
+========================
+for a numbered parameter
+========================
+
+{|style="width:250px; " border="0"
+|-
+|width=100px|
+|width=100px|
+|-
+| colspan="2" align="center" |'''{{{1}}}''' 
+|-
+| colspan="2" align="center" |[[Image:{{{2}}}]]
+|-
+| colspan="2" align="center" |''{{{3}}}''
+|-
+|'''Directed by'''||{{{4}}}
+|-
+|'''Produced by'''||{{{5}}}
+|-
+|'''Written by'''||{{{6}}}
+|-
+|'''Screenplay:'''||{{{7}}}
+|-
+|'''Starring'''||{{{8}}}
+|-
+|'''Distributed by''' ||{{{9}}}
+|-
+|'''Release date(s)'''||{{{10}}}
+|-
+|'''Running time'''|| 	{{{11}}}
+|-
+|'''Language'''||	{{{12}}}
+|-
+|'''Budget'''|| 	{{{13}}}
+|}
+
+=======================
+different movie summary
+=======================
+
+{{Movie_Summary
+|The Haunting
+|200px-The_Haunting_Poster.jpg
+|The Haunting DVD cover
+|[[Robert Wise]]
+|[[Robert Wise]]
+|'''Novel:'''<br>[[Shirley Jackson]]
+|[[Nelson Gidding]]
+|[[Julie Harris]]<br />[[Richard Johnson]]<br />[[Claire Bloom]]
+|[[MGM]]
+|[[September 18]], [[1963]] ([[USA]])
+|112 min.
+|[[English language|English]]
+|
+}}
+
+

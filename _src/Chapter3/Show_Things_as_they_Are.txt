@@ -1,0 +1,31 @@
+
+=================================================
+The <nowiki> tag  for non-formatting wiki syntax.
+=================================================
+
+In order to Put a Link of our site on your site , copy paste the following line to your site pages
+
+<nowiki>
+<a herf="http://www.haunted.com"> Haunted   -   The place for Ghost enthusiast </a>
+</nowiki>
+
+
+==========================================
+no formatting using the <pre> tag of HTML
+==========================================
+
+In order to Put a Link of our site on your site , copy paste the following line to your site pages
+
+<pre>
+<a herf="http://www.haunted.com"> Haunted   -   The place for Ghost enthusiast </a>
+</pre>
+
+
+============================================================
+preserve formatting is through application of leading spaces
+============================================================
+In order to Put a Link of our site on your site , copy paste the following line to your site pages
+
+
+ <a herf="http://www.haunted.com"> Haunted   -   The place for Ghost enthusiast </a>
+

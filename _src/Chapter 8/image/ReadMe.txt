@@ -1,0 +1,1 @@
+This folder contains an image file that is required in Chapter 8 for changing the Background image and also contains the haunted logo.

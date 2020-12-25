@@ -1,0 +1,43 @@
+body {
+min-width: 610px;
+margin: 20px;
+}
+#container
+{
+max-width: 70em;
+margin: 0 auto;
+}
+#mBody
+{
+clear: both;
+padding: 0 0 1em 0;
+}
+#side
+{
+float: left;
+width: 23%;
+margin-bottom: 1em;
+border: 1px solid #000;
+height:40px;
+}
+#mainContent
+{
+float: right;
+width: 75%;
+margin-bottom: 1em;
+border: 1px solid #000;
+height:40px;
+}
+#header
+{
+margin-bottom: 1em;
+border: 1px solid #000;
+height:40px;
+}
+#footer
+{
+clear: both;
+margin-top: 1em;
+border: 1px solid #000;
+height:40px;
+}

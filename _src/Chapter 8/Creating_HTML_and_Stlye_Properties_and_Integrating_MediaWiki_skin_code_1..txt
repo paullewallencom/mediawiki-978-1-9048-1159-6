@@ -1,0 +1,21 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/haunted/
+skins/haunting/haunting.css" />
+</head>
+<body>
+<div id="container">
+<div id="header"> <!-- start of HEADER div -->
+</div> <!-- end of HEADER div -->
+<div id="mBody"> <!-- start of MBODY div -->
+<div id="side"> <!-- start of SIDE div -->
+</div> <!-- end of SIDE div -->
+<div id="mainContent"> <!-- start of MAINCONTENT div -->
+</div> <!-- end of MAINCONTENT div -->
+</div> <!-- end of MBODY div -->
+<div id="footer"> <!-- start of FOOTER div -->
+</div> <!-- end of FOOTER div -->
+</div> <!-- end of the CONTAINER div -->
+</body>
+</head>
+</html>

@@ -1,0 +1,25 @@
+
+
+<div style="position: relative">[[Image:ghostmap.jpg]]
+<div style="position: absolute; left: 375px; top: 260px"><b>Legend</b></div>
+<div style="position: absolute; left: 375px; top: 280px">[[image:square.gif]] Ghost House</div>
+<div style="position: absolute; left: 375px; top: 300px">[[image:circle.gif]] Copper Mines</div>
+<div style="position: absolute; left: 375px; top: 320px">[[image:diamond.gif]] Ghost Town</div>
+<div style="position: absolute; left: 375px; top: 350px">[[image:star.gif]] First Ghost Sighted</div>
+</div>
+
+
+
+=============
+modified code
+=============
+
+
+<div style="position: relative">[[Image:ghostmap.jpg]]
+<div style="position: absolute; left: 375px; top: 260px"><b>Legend</b></div>
+<div style="position: absolute; left: 375px; top: 280px">[[image:square.gif]] [[GhosthouseOldmap | Ghost House]]</div>
+<div style="position: absolute; left: 375px; top: 300px">[[image:circle.gif]] [[copperminesOldmap | Copper Mines]]</div>
+<div style="position: absolute; left: 375px; top: 320px">[[image:diamond.gif]] [[ghosttownOldmap | Ghost Town]]</div>
+<div style="position: absolute; left: 375px; top: 350px">[[image:star.gif]] [[ghostsightedOldmap | First Ghost Sighted]]</div>
+</div>
+

@@ -1,0 +1,30 @@
+{| style="background:#cccc99;color:black;width:80%;" border="1" cellpadding="5" cellspacing="0" align="center"
+|+ Story Listing
+!# !! Story Title !! Author !! Submission Date
+|- style="background:white; color:black"
+! 1.
+| style="width:300px" |The Ghost of the Old Mathematician
+| J. David
+| 12/09/2006
+|- style="background:#f0f0f0; color:black"
+! 2.
+| The little Mummy
+| W. Patricia
+| 13/09/2006
+|- style="background:white; color:black"
+! 3.
+| The Guest
+| S. Steve
+| 13/09/2006
+|- style="background:#f0f0f0; color:black"
+! 4. 
+| A true story
+| W. Henry
+| 15/09/2006
+|- style="background:white; color:black"
+! 5.
+| Nightmare
+| M. Rahman
+| 17/09/2006
+|}
+

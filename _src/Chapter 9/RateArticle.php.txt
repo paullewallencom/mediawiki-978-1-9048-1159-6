@@ -1,0 +1,79 @@
+<?
+if ( ! defined( 'MEDIAWIKI' ) )
+die();
+require_once("DatabaseFunctions.php");
+function wfRateArticleForm()
+{
+global $wgArticle, $wgUser, $wgScriptPath;
+if(isset($_GET['rated'])&& $_GET['rated'] == "successfully")
+{
+$wgArticle->purge();
+}
+$s = getArticleRating();
+if($wgUser->isLoggedIn())
+{
+if(!articleRated())
+{
+$s .= '<form name="rank" class="inline" method="post"
+action="'.$wgScriptPath.'/saverating.php">'"
+<br> Rate this Article:
+<input type=radio name=rating value=1> 1
+<input type=radio name=rating value=2> 2
+<input type=radio name=rating value=3 checked> 3
+<input type=radio name=rating value=4> 4
+<input type=radio name=rating value=5> 5
+<Br>
+<input type=hidden name=articleID value='
+".wgArticle->getID()."'>"."<input type=hidden name
+=articleTitle value='".$wgArticle->getTitle()->
+getPrefixedText()."'>"."<input type=hidden name=userName
+value='".$wgUser->getName()."'>". '<input type="submit"
+name="go" value="Save your Rating" />&nbsp;</form>';
+}
+}
+echo $s;
+}
+function getArticleRating()
+{
+global $wgArticle, $wgDBprefix;
+$articleID = $wgArticle->getID();
+$totalRatings = 0;
+$totalPoints = 0;
+$averageRating = 0;
+$sql = "SELECT totalRatings, totalPoints FROM {$wgDBprefix}
+articlerating WHERE articleID=$articleID" ;
+$res = wfQuery( $sql, DB_READ );
+if( $s = wfFetchObject( $res ) )
+{
+$totalRatings = $s->totalRatings;
+$totalPoints = $s->totalPoints;
+}
+if($totalRatings>0)
+{
+$averageRating = $totalPoints/$totalRatings;
+return "Average Rating for this Article is
+<b>".sprintf "%.2f",$averageRating)."</b>
+( out of 5.00 ) after $totalRatings Ratings";
+}
+else
+{
+return "No rating has been done for this Article.";
+}
+}
+function articleRated()
+{
+global $wgArticle, $wgUser, $wgDBprefix;
+$articleID = $wgArticle->getID();
+$userName = $wgUser->getName();
+$sql = "SELECT * FROM {$wgDBprefix}articleratinghistory WHERE
+articleID=$articleID and userName = '$userName'" ;
+$res = wfQuery( $sql, DB_READ );
+if( $s = wfFetchObject( $res ) )
+{
+return true;
+}
+else
+{
+return false;
+}
+}

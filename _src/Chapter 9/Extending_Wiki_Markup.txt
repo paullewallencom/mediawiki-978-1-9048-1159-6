@@ -1,0 +1,23 @@
+========================================================================
+Add at the end of the includes/Setup.php fi le, before the end tag (?>):
+========================================================================
+
+function ParseGHOSTNOTETag($Content)
+{
+global $wgOut;
+$wgOut->enableClientCache(false);
+$Content = str_replace("<GHOSTNOTE>", "", $Content);
+$Content = str_replace("</GHOSTNOTE>", "", $Content);
+$randomColor = rand(0,9);
+$bgColor = array ( '#CCCCFF', '#FFCCFF', '#FFCCCC',
+'#33CCFF', '#33CCCC', '#FFFFCC', '#99CCFF',
+'#FF9933', '#99FF99', '#FF6699');
+$returnStr="<center><table width=50% border=1 style='border: .75pt
+dashed white; background-color: ".$bgColor[$randomColor]."'>
+<tr><td align=center valign=middle bgcolor="$bgColor
+[$randomColor]"><pre>";
+$returnStr .= $Content;
+$returnStr .= "</pre></td></tr></table></center>";
+return $returnStr;
+}
+$wgParser->setHook('GHOSTNOTE','ParseGHOSTNOTETag');

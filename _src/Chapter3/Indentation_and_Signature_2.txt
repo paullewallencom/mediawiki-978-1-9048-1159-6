@@ -1,0 +1,6 @@
+User :
+: ~~~
+User name & date/time:
+: ~~~~
+Date/time:
+: ~~~~~

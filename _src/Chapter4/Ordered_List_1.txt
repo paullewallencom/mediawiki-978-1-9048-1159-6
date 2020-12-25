@@ -1,0 +1,21 @@
+Stories can have the following Categories
+# Novel
+# Short Story
+# Real life story
+# Articles
+Here are the writing guidelines
+# Basic Guidelines
+## Story must be within 1200 words.
+## Computer Typed:
+### Font size: 12 pt
+### Paragraph: double line break
+### Font Name: Times New Roman
+## Well formatted with a front page
+## Front page content:
+### Story name
+### Author Name
+### Submission Date
+### Category
+### Author Email Address
+# All entries must be submitted before 1st October, 2006
+# For any query, contact storyteller@haunted.com

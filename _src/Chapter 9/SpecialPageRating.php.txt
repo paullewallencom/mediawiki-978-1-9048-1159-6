@@ -1,0 +1,140 @@
+=================================
+Save inside the extensions folder
+=================================
+
+<?php
+if( defined( 'MEDIAWIKI' ) )
+{
+require_once( 'SpecialPage.php' );
+$wgExtensionFunctions[] = 'wfSpecialPageRating';
+$wgExtensionCredits['specialpage'][] = array( 'name' =>
+'Article Ratings', 'author' => 'Mizanur Rahman', 'url' => '' );
+function wfSpecialPageRating()
+{
+global $wgMessageCache;
+SpecialPage::addPage( new PageRating() );
+$wgMessageCache->addMessage( 'pagerating', 'Article Ratings' );
+$wgMessageCache->addMessage( 'pagerating-header', "'''This page
+lists the $1 ranked pages on the wiki.'''" );
+$wgMessageCache->addMessage( 'pagerating-limitlinks', 'Show
+up to $1 pages' );
+$wgMessageCache->addMessage( 'pagerating-showing',
+'Found $1 pages;
+listing newest first:' );
+$wgMessageCache->addMessage( 'pagerating-none', 'No entries
+were found.' );
+}
+class PageRating extends IncludableSpecialPage
+{
+var $limit = 50;
+function PageRating()
+{
+SpecialPage::SpecialPage( 'PageRating', '', true, false,
+'default', true );
+}
+function execute( $par )
+{
+global $wgOut;
+$this->setLimit( $par );
+# Don't show the navigation if we're including the page
+if( !$this->mIncluding )
+{
+$this->setHeaders();
+$wgOut->addWikiText( wfMsg( 'pagerating-header',
+$this->limit ));
+$wgOut->addHTML( $this->makeLimitLinks() );
+}
+$dbr =& wfGetDB( DB_SLAVE );
+$res = $dbr->query( "SELECT * from articlerating ORDER BY
+articleID DESC LIMIT 0,{$this->limit}" );
+$count = $dbr->numRows( $res );
+if( $count > 0 )
+{
+# Make tabled list
+if( !$this->mIncluding )
+$wgOut->addWikiText( wfMsg ( 'pagerating-showing', $count ) );
+$wgOut->addHTML( "<br><br><table align=center border=0
+cellspacing=0 cellpadding=0 width=70%
+style='background:transparent'>\n" );
+$wgOut->addHTML( "<tr><Td width=5%><B>#</td>
+<Td width=50%><B>Page Title</td><td><B> Current
+Rating</td><td><B>Number of Rating</td></tr>");
+$i=1;
+while( $row = $dbr->fetchObject( $res ) )
+$wgOut->addHTML( $this->makeListItem ( $row, $i++ ) );
+$wgOut->addHTML( "</table>\n" );
+}
+else
+{
+$wgOut->addWikiText( wfMsg( 'pagerating-none' ) );
+}
+$dbr->freeResult( $res );
+}
+function setLimit( $par )
+{
+if( $par )
+{
+$this->limit = intval( $par );
+}
+else
+{
+global $wgRequest;
+if( $limit = $wgRequest->getIntOrNull( 'limit' ) )
+{
+$this->limit = $limit;
+}
+else
+{
+$this->limit = 50;
+}
+}
+}
+function makeListItem( $row , $i )
+{
+global $wgUser;
+$title = $row->articleName;
+$ratingpoint = $row->totalPoints;
+$totalrating = $row->totalRatings;
+$currentRating = sprintf("%.2f",$ratingpoint/$totalrating);
+if( !is_null( $title ) )
+{
+return( "<tr><td>$i.</td><td>$title</td><td align=center>
+$currentRating</td><td align=center>$totalrating</td></tr>\n");
+}
+else
+{
+return( "<!-- Invalid title "
+. htmlspecialchars( $row->page_title ) . " in namespace "
+. htmlspecialchars( $row->page_namespace ) . " -->\n" );
+}
+}
+function makeLimitLinks()
+{
+global $wgUser;
+$skin = $wgUser->getSkin();
+$title = Title::makeTitle( NS_SPECIAL, 'PageRating' );
+$limits = array( 10, 20, 30, 50, 100, 150 );
+foreach( $limits as $limit )
+{
+if( $limit != $this->limit )
+{
+$links[] = $skin->makeKnownLinkObj( $title, $limit,
+'limit=' . $limit );
+}
+Else
+{
+$links[] = (string)$limit;
+}
+}
+return( wfMsgHtml( 'pagerating-limitlinks',
+implode( ' | ', $links ) ) );
+}
+}
+}
+else
+{
+echo( "This is an extension to the MediaWiki package and cannot
+be run standalone.\n" );
+die( -1 );
+}
+?>

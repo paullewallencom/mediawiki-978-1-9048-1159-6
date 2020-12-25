@@ -1,0 +1,27 @@
+
+==================================================================================================
+Copy the followingcode section from DefaultSettings.php file and paste it into localsettings.php.
+==================================================================================================
+
+$wgGroupPermissions = array();
+$wgGroupPermissions['*' ]['createaccount'] = true;
+$wgGroupPermissions['*' ]['read'] = true;
+$wgGroupPermissions['*' ]['edit'] = true;
+$wgGroupPermissions['user' ]['move'] = true;
+$wgGroupPermissions['user' ]['read'] = true;
+$wgGroupPermissions['user' ]['edit'] = true;
+$wgGroupPermissions['user' ]['upload'] = true;
+$wgGroupPermissions['bot' ]['bot'] = true;
+$wgGroupPermissions['sysop']['block'] = true;
+$wgGroupPermissions['sysop']['createaccount'] = true;
+$wgGroupPermissions['sysop']['delete'] = true;
+$wgGroupPermissions['sysop']['editinterface'] = true;
+$wgGroupPermissions['sysop']['import'] = true;
+$wgGroupPermissions['sysop']['importupload'] = true;
+$wgGroupPermissions['sysop']['move'] = true;
+$wgGroupPermissions['sysop']['patrol'] = true;
+$wgGroupPermissions['sysop']['protect'] = true;
+$wgGroupPermissions['sysop']['rollback'] = true;
+$wgGroupPermissions['sysop']['upload'] = true;
+$wgGroupPermissions['bureaucrat']['userrights'] = true;
+$wgGroupPermissions['bureaucrat']['renameuser'] = true;

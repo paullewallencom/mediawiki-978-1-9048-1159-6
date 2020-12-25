@@ -1,0 +1,31 @@
+{|
+| #
+| Story Title
+| Author
+| Submission Date
+|-
+| 1.
+| The Ghost of the Old Mathematician
+| J. David
+| 12/09/2006
+|-
+| 2.
+| The little Mummy
+| W. Patricia
+| 13/09/2006
+|-
+| 3.
+| The Guest
+| S. Steve
+| 13/09/2006
+|-
+| 4.
+| A true story
+| W. Henry
+| 15/09/2006
+|-
+| 5.
+| Nightmare
+| M. Rahman
+| 17/09/2006
+|}

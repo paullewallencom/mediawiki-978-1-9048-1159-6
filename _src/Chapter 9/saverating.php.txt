@@ -1,0 +1,30 @@
+
+==============================================
+Save it in theroot folder of your installation
+==============================================
+
+require_once( './includes/WebStart.php' );
+$dbw =& wfGetDB( DB_MASTER );
+$dbw->begin();
+$sql = "update {$wgDBprefix}articlerating set
+`totalRatings` = `totalRatings` + 1,
+`totalPoints` = `totalPoints` + '$_POST[rating]'
+where `articleID` = '$_POST[articleID]' ";
+$res = $dbw->query($sql);
+if($dbw->affectedRows()==0)
+{
+$sql = "insert into {$wgDBprefix}articlerating set
+`articleID` = '$_POST[articleID]',
+`articleName` = '$_POST[articleTitle]',
+`totalRatings` = 1,
+`totalPoints` = '$_POST[rating]' ";
+$res = $dbw->query( $sql);
+}
+$sql = "insert into {$wgDBprefix}articleratinghistory set
+`articleID` = '$_POST[articleID]',
+`userName` = '$_POST[userName]',
+`articleRating` = '$_POST[rating]'";
+$res = $dbw->query( $sql);
+$dbw->commit();
+he ader("Location: index.php?title=".$_POST
+['articleTitle']."&rated=successfully");

@@ -1,0 +1,43 @@
+{| style="background:#ccccc99;color:black;width:100%;" border="0" cellpadding="5" cellspacing="2" align="center"
+|-
+| style="width:50%;background:#f5fffa; border:1px solid #cef2e0;color:black;align:center;vertical-align:top" | 
+{| style="color:black;width:99%;background-color:#cef2e0;font-weight:bold;border:1px solid #a3bfb1;" border="0" cellpadding="5" cellspacing="2" align="center"
+|-
+| '''Todays Featured Topic'''
+|}
+
+;Residual
+:Residual Haunting are playback of an event in time that are left at a location. Many haunting scene are thought to be residual in nature (foot steps in hallways, seeing someone walking down a certain staircase, etc.).  They are endless loops of the same scene being played over and over, and they are usually always experienced in the same location.
+
+;Anniversary
+:Anniversary ghosts do, as the title suggests, only appear on an anniversary of some significance like deaths, birthdays and other times that held some meaning for the deceased or are of historical significance to them. Since this type of ghost only appears on the anniversary of a special event, it seems likely this type of haunting could be a residual haunting, reenacting a certain event in time on that one day or night. 
+| style="width:50%;background:#f5faff; border:1px solid #cedff2;color:black;align:center;vertical-align:top" | 
+{| style="color:black;width:99%;background-color:#cedff2;font-weight:bold;border:1px solid #a3b0bf;" border="0" cellpadding="5" cellspacing="2" align="center"
+|-
+| '''Ghost News Around the World'''
+|}
+
+* UK Ghost Hunters monthly meeting held on Tuesday, 12th September,2006
+* New Ghost sighted at a village in China
+* New story book from famous Ghost writer ''Mr. Ghost'' has been published.
+* Florida Ghost hunter group arranged weekly gathering this week for the upcoming haunting tour.
+* Ghost hunters community in USA reaches 10,000 members
+* Haunted Community in Australia starts the journey.
+* Haunted video released by New Jersey Ghost Hunters Community
+
+|-
+| colspan=2 align=center style="width:50%;background:#faf5ff; border:1px solid #afa3bf;color:black;align:center;vertical-align:top" |
+{| style="color:black;width:99%;background-color:#ddcef2;font-weight:bold;border:1px solid #afa3bf;" border="0" cellpadding="5" cellspacing="2" align="center"
+|-
+| '''Ghost Picture of the Day'''
+|}
+
+{| style="color:black;width:99%;background-color:#faf5ff;;border:0px solid #afa3bf;" border="0" cellpadding="5" cellspacing="2" align="left"
+|-
+| rowspan=2 | Ghost Picture will be here
+| Submitted By: '''Mr. Ghost''' , On: 12/09/2006
+|- 
+| '''Previous Images'''
+|}
+
+|}

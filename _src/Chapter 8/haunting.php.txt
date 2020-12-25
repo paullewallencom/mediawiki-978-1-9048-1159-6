@@ -1,0 +1,24 @@
+<?php
+if( !defined( 'MEDIAWIKI' ) )
+die(-1);
+require_once('includes/SkinTemplate.php');
+class Skinhaunting extends SkinTemplate
+{
+function initPage( &$out )
+{
+SkinTemplate::initPage( $out );
+$this->skinname = 'haunting';
+$this->stylename = 'haunting';
+$this->template = 'hauntingTemplate';
+}
+}
+class hauntingTemplate extends QuickTemplate
+{
+function execute()
+{
+// Suppress warnings to prevent notices about missing indexes in
+// $this->data
+wfSuppressWarnings();
+}
+}
+?>

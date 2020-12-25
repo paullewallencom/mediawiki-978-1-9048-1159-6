@@ -1,0 +1,67 @@
+=====================
+code for the template
+=====================
+
+{|style="width:250px; " border="0"
+|-
+|width=100px|
+|width=100px|
+|-
+| colspan="2" align="center" |'''{{{name}}}''' 
+|-
+| colspan="2" align="center" |[[Image:{{{image}}}|{{{image_size|200px}}}]]
+|-
+| colspan="2" align="center" |''{{{caption}}}''
+|-
+|'''Directed by'''||{{{director}}}
+|-
+|'''Produced by'''||{{{producer}}}
+|-
+|'''Written by'''||{{{writer}}}
+|-
+|'''Screenplay:'''||{{{screenplay}}}
+|-
+|'''Starring'''||{{{starring}}}
+|-
+|'''Distributed by''' ||{{{distributor}}}
+|-
+|'''Release date(s)'''||{{{released}}}
+|-
+|'''Running time'''|| 	{{{runtime}}}
+|-
+|'''Language'''||	{{{language}}}
+|-
+|'''Budget'''|| 	{{{budget}}}
+|}
+
+==================================================
+Write the following tag at the top of the edit box
+==================================================
+
+{{Movie_Summary |
+  name     = The Haunting |
+  image          = 200px-The_Haunting_film.jpg |
+  caption  = ''The Haunting'' film poster |
+  writer = '''Novel:'''<br>[[Shirley Jackson]] |
+  screenplay = [[David Self]] |
+  starring       = [[Lili Taylor]],<BR>[[Catherine Zeta-Jones]],<br>[[Owen Wilson]],<br>[[Liam Neeson]] |
+  director       = [[Jan de Bont]] |
+  producer       = [[Donna Roth]],<br>[[Colin Wilson]] |
+  distributor    = [[DreamWorks]] |
+  released   = [[July 20]], [[1999]] |
+  runtime        = 113 minutes |
+  language = English |
+  budget         = ~ US$80,000,000 
+}}
+
+
+
+
+
+
+
+
+
+
+
+
